@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Elden Ring Nightreign</title>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="shortcut icon" href="../imagens/icon.png" type="image/x-icon">
+  <style>
+    * {
+      cursor: url('../imagens/pointer.png') 16 16, auto !important;
+    }
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .hero iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120%;
+      height: 120%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.25;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 20px;
+    }
+
+    .hero-title {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 4rem;
+      text-shadow: 0 0 15px #000;
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      text-shadow: 0 0 10px #000;
+    }
+     .btn-hero {
+      background: #f0c300;
+      color: #000;
+      padding: 12px 30px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .btn-hero:hover {
+      background: #d4aa00;
+    }
+    body {
+      
+      color: #e0e0e0;
+      line-height: 1.6;
+      margin: 0;
+      cursor: url('imagens/pointer.png'), auto;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: rgb(109, 143, 165);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+     
+      padding: 110px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #f5d45e;
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .imagem-destaque {
+      max-width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 0 12px #000;
+      margin: 20px 0;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .imagem-destaque:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 18px #6d8fa5;
+    }
+
+    .mechanic {
+      margin-bottom: 20px;
+    }
+
+    .mechanic h3 {
+      color: #8fc7ff;
+    }
+
+    .highlight {
+      color: #ffc94a;
+      font-weight: bold;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+ <header>
+        <div class="container">
+      <img src="../imagens/ELDEN-RING-NIGHTREIGN-LOGO.png" alt="Logo Nightreign" class="logo" />
+        <nav>
+
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="../pages/historia.html">História</a></li>
+                <li><a href="../pages/personagens.html">Personagens</a></li>
+                <li><a href="../pages/gameplay.html">Gameplay</a></li>
+                <li><a href="../pages/builds.html">Builds</a></li>
+                <li><a href="../pages/mapa.html">Mapa</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+  <section class="hero">
+    <iframe 
+      src="https://www.youtube.com/embed/Djtsw5k_DNc?si=edFJb-lq85XVovtW&autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=Djtsw5k_DNc"
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen 
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </section>
+  <main>
+    <h2>Gameplay e Mecânicas</h2>
+
+    <section>
+      <img src="../imagens/umbra.webp" alt="Região de Umbra" class="imagem-destaque" />
+      <div class="mechanic">
+        <h3>🌒 Nova Região: <span class="highlight">Reino de Umbra</span></h3>
+        <p>Explore um mundo invertido onde a luz foi esquecida. Cidades flutuam em abismos infinitos, monstros se escondem nas sombras e o tempo parece parado. Aqui, você vai precisar dominar uma nova mecânica: a transição entre Umbra e a superfície. Essa troca é essencial pra desbloquear caminhos e sobreviver.</p>
+      </div>
+    </section>
+
+    <section>
+      <img src="../imagens/armas.avif" alt="Armas sombrias" class="imagem-destaque" />
+      <div class="mechanic">
+        <h3>⚔ Armas Sombrias</h3>
+        <p>Essas armas foram forjadas com almas perdidas e energia obscura. Causam dano ilusório, veneno e até <span class="highlight">corrupção espiritual</span>. Algumas mudam de forma durante a luta, dependendo do seu estilo de combate. É importante testar combinações pra descobrir todo o potencial.</p>
+      </div>
+    </section>
+
+    <section>
+      <img src="../imagens/inimigo.avif" alt="IA inteligente" class="imagem-destaque" />
+      <div class="mechanic">
+        <h3>🧠 Inimigos com IA Avançada</h3>
+        <p>Os inimigos agora aprendem com você. Se atacar sempre de longe, eles vão se aproximar. Se usar muita magia, vão tentar silenciar. A cada morte, eles evoluem e se adaptam, então não dá pra ficar preso a uma estratégia só. A parada é se reinventar a cada área.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="mechanic">
+        <h3>🎮 Novas Mecânicas</h3>
+        <ul>
+          <li><strong>Rituais Noturnos:</strong> Eventos únicos que só acontecem com lua cheia.</li>
+          <li><strong>Corrupção:</strong> Uma barra que cresce conforme você usa magia negra, e pode levar à insanidade.</li>
+          <li><strong>Ilusões Reais:</strong> Inimigos falsos que somem com luz intensa ou sons altos.</li>
+          <li><strong>Almas Partidas:</strong> Um sistema que divide sua alma entre duas builds, criando possibilidades de combos únicos.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Elden Ring: Nightreign. Todos os direitos reservados.</p>
+      <p>Site fictício criado para fins educacionais e de portfólio.</p>
+    </div>
+
+  <script src="../plugins/jquery.min.js"></script>
+  <script src="../js/script.js"></script>
+   <script>
+  $(document).ready(function() {
+    $('.open-popup').magnificPopup({
+      type: 'inline',
+      removalDelay: 300,
+      mainClass: 'popup-from-bottom',
+    });
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elden Ring Nightreign</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Roboto:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="shortcut icon" href="../imagens/icon.png" type="image/x-icon">
+  <style>
+    * {
+      cursor: url('../imagens/pointer.png') 16 16, auto !important;
+    }
+    body {
+      background-color: #000;
+      font-family: 'Roboto', sans-serif;
+      cursor: url('imagens/pointer.png'), auto;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+      color: #f0f0f0;
+    }
+    header .containerar {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-lateral {
+      width: 250px;
+      background-color: black;
+      margin-top: 70px;
+      padding: 20px;
+      box-shadow: 4px 0 10px #6d8fa5;
+    }
+
+    .menu-lateral ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .menu-lateral li {
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid #333;
+      transition: background 0.3s;
+    }
+
+    .menu-lateral li:hover {
+      background-color: #333;
+    }
+
+    .conteudo {
+      flex: 1;
+      padding: 40px;
+      margin-top: 55px;
+    }
+
+    .conteudo img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 12px #6d8fa5;
+      margin-bottom: 20px;
+      background-color: rgba(0, 0, 0, 0.664);
+    }
+
+    .conteudo h2 {
+      color: #f5d45e;
+    }
+
+    .conteudo p {
+      font-size: 1.1em;
+      width: 40%;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px #6d8fa5;
+      background-color: rgba(0, 0, 0, 0.664);
+      height: auto;
+      color: #ccc;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="containerar">
+      <img src="../imagens/ELDEN-RING-NIGHTREIGN-LOGO.png" alt="Logo Nightreign" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../pages/historia.html">História</a></li>
+          <li><a href="../pages/personagens.html">Personagens</a></li>
+          <li><a href="../pages/gameplay.html">Gameplay</a></li>
+          <li><a href="../pages/builds.html">Builds</a></li>
+          <li><a href="../pages/mapa.html">Mapa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <aside class="menu-lateral">
+      <ul>
+        <li onclick="mostrarPersonagem('duchess')">Duchess</li>
+        <li onclick="mostrarPersonagem('recluse')">Recluse</li>
+        <li onclick="mostrarPersonagem('guardian')">Guardian</li>
+        <li onclick="mostrarPersonagem('ironeye')">Ironeye</li>
+        <li onclick="mostrarPersonagem('raider')">Raider</li>
+        <li onclick="mostrarPersonagem('wylder')">Wylder</li>
+        <li onclick="mostrarPersonagem('executor')">Executor</li>
+        <li onclick="mostrarPersonagem('nightidol')">Night Idol</li>
+        <li onclick="mostrarPersonagem('wormface')">Wormface</li>
+        <li onclick="mostrarPersonagem('famingchariots')">Flaming Chariots</li>
+        <li onclick="mostrarPersonagem('firemonk')">Fire Monk</li>
+        <li onclick="mostrarPersonagem('flyingdragonaghell')">Flying Dragon Agheel</li>
+
+      </ul>
+    </aside>
+
+    </section>
+
+    <main class="conteudo" id="conteudo">
+      <h2>Selecione um personagem</h2>
+      <p>Ao clicar em um nome à esquerda, aparecerá aqui a imagem e descrição do personagem.</p>
+    </main>
+  </div>
+
+  <script>
+    const personagens = {
+      duchess: {
+        nome: "Duchess",
+        imagem: "../imagens/duchess.png",
+        descricao: `
+       Outrora uma empírea destinada à ascensão divina, Nightreign rejeitou a graça celestial em troca de um poder mais antigo e profundo: o da noite viva. Governante do Castelo Ébano, ela foi marcada pela lua negra em um ritual proibido, tornando-se a matriarca de um culto sombrio que acredita na supremacia dos sonhos sobre a realidade. A duquesa não comanda exércitos com espadas ou fogo — mas com ilusões tão vívidas que podem matar. Seus súditos são espectros apaixonados por sua voz, e suas ordens são sussurradas entre as sombras como profecias. Dizem que seu cetro é feito dos ossos de empíreos esquecidos, e que seus olhos enxergam o destino invertido dos vivos. Para seus seguidores, ela é uma salvadora. Para o mundo, uma heresia viva. Nightreign não busca o trono dourado... ela deseja apagá-lo do tempo.
+
+        <div style="margin-top: 20px;max-width: 560px; height: auto; border-radius: 8px; box-shadow: 0 0 12px #6d8fa5; margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.664);">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3wvBA-wqEag?si=80_6aRpuoopFZGBR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </ul>
+        `
+      },
+      recluse: {
+        nome: "Recluse",
+        imagem: "../imagens/recluse.png",
+        descricao: `
+         Enterrado sob camadas de pedra e esquecimento, o Recluso vive em um abismo onde a luz não ousa entrar. Ele é um semideus rejeitado, filho bastardo de uma árvore-mãe e de um avatar esquecido. Seu corpo é frágil e torto, mas sua mente... é um campo de guerra onde o tempo foi dobrado. Diz-se que ele fala com os ecos dos mortos e escreve feitiços que podem selar a própria memória. Exilado por sua irmã, a Duquesa Nightreign, o Recluso jurou nunca mais interferir nos assuntos do mundo — mas o mundo não o esqueceu. Sua existência é um fardo sagrado, uma cicatriz nos alicerces da realidade. Aqueles que o procuram raramente compreendem as palavras que ele sussurra, mas voltam transformados — ou completamente vazios. Seus olhos não veem, mas lembram. E há rumores de que ele guarda a chave para reverter a Noite de Cinzas... ou perpetuá-la para sempre.
+         <div style="margin-top: 20px;max-width: 560px; height: auto; border-radius: 8px; box-shadow: 0 0 12px #6d8fa5; margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.664);">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vIpyWkCm_9M?si=50drr0sJ5TJudz_l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </ul>
+        `
+      },
+      guardian: {
+        nome: "Guardian",
+        imagem: "../imagens/GUARDIAN.webp",
+        descricao: `
+        O Guardian é uma sentinela eterna, criado não da carne, mas da memória dos que choraram diante do esquecimento. Forjado por rituais ancestrais no coração do Reino Lacrimosa, ele vigia os portões de um saber selado — um conhecimento tão perigoso que até os deuses temem sua revelação. Sua forma é fluida, quase espectral, envolta em armaduras prateadas que refletem não a luz, mas o passado do observador. Cada golpe seu carrega o peso de uma história esquecida, e seus olhos brilham com a tristeza de mil eras. Muitos o confundem com uma máquina, mas há um coração ali — um coração que pulsa apenas por um juramento antigo: proteger o segredo do mundo, mesmo que isso signifique destruir qualquer vestígio de esperança.
+        <div style="margin-top: 20px;max-width: 560px; height: auto; border-radius: 8px; box-shadow: 0 0 12px #6d8fa5; margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.664);">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/rPjdxxwIdnI?si=p9v-wTEX1IGvxPdg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </ul>
+        `
+      },
+      ironeye: {
+        nome: "Ironeye",
+        imagem: "../imagens/ironeye.webp",
+        descricao: `Ironeye não foi forjado — ele foi arrancado da Terra por uma tempestade de guerra. Um gigante coberto de placas de latão sagrado, sua carne foi moldada com runas vivas, e seus olhos são joias amaldiçoadas que nunca fecham. Ele não fala, não dorme, não teme. É a força bruta da tradição, movida por uma vontade que não é sua. Reza a lenda que Ironeye foi criado para proteger o trono da Ordem Dourada, mas foi corrompido pelos sussurros da Duquesa Nightreign. Desde então, ele caminha como uma montanha viva, esmagando tudo em seu caminho com a inevitabilidade da extinção. Seu martelo tem o peso de cem mil promessas quebradas, e seu passo ecoa como o fim de uma era. Não há negociação. Não há piedade. Onde Ironeye marcha, a história se desfaz.
+        <div style="margin-top: 20px;max-width: 560px; height: auto; border-radius: 8px; box-shadow: 0 0 12px #6d8fa5; margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.664);">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/T_j1zYVnULg?si=uyBTlEX74XeY2pqv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </ul>
+        `
+      },
+      raider: {
+        nome: "Raider",
+        imagem: "../imagens/raider.webp",
+        descricao: `No rastro de batalhas esquecidas e catedrais em ruínas, cavalga Raider, o Saqueador das Marés Fúnebres. Antigo cavaleiro sagrado, ele abandonou o juramento à Ordem Dourada após testemunhar o massacre de inocentes pelas mãos daqueles que chamava de irmãos. A podridão do ideal o transformou. Agora, veste uma armadura corroída por relíquias roubadas, onde cada peça é um fragmento de mártir ou herege. Ele caça os mortos... não para enterrá-los, mas para roubar-lhes a memória. Seus olhos, queimados por visões proféticas, brilham com um fogo espectral. Raider não luta por glória, nem redenção — mas por vingança contra os deuses que permitiram a traição. Onde ele cavalga, sinos soam ao contrário e os corvos voam ao leste. Suas armas são fragmentos de história proibida, e sua alma, um mapa de cem batalhas malditas.
+        <div style="margin-top: 20px;max-width: 560px; height: auto; border-radius: 8px; box-shadow: 0 0 12px #6d8fa5; margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.664);">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/o1BbS068Daw?si=aoQW-TlJ7LJfJz2l&amp;start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </ul>
+        `
+      },
+      wylder: {
+        nome: "Wylder",
+        imagem: "../imagens/WYLDER.webp",
+        descricao: `
+        Wylder nasceu sob a lua podre, em um bosque onde a própria terra sangrava. Criança marcada pela podridão escarlate, foi abandonado por sua vila, apenas para ser acolhido pelas feras que habitavam o Ermo Pútrido. Lá, aprendeu não só a sobreviver, mas a governar. Tornou-se feiticeiro, não pelas escolas formais da magia, mas por absorver o instinto das criaturas corrompidas. Seus feitiços não obedecem lógica ou linguagem: eles urram, mordem, caçam. Seu corpo é coberto de marcas vivas que latejam com cada conjuração. Quando Wylder marcha à guerra, os bosques ganham presas, e os ventos gritam. Ele é o espírito selvagem da decadência, um xamã do caos. Nem aliado nem inimigo previsível — sua fúria obedece apenas ao pulso da terra ferida.
+        <div style="margin-top: 20px;max-width: 560px; height: auto; border-radius: 8px; box-shadow: 0 0 12px #6d8fa5; margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.664);">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/jStF2eZ72tw?si=ujp-qAAe5J9al0gW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </ul>
+        `
+      },
+      executor: {
+        nome: "Executor",
+        imagem: "../imagens/executor.webp",
+        descricao: `Executor não nasceu; foi forjado no lamento de mil sentenças. Antigo carrasco da Capital Dourada, ele não era homem, mas função — um dogma feito carne. Seu machado sagrado, “Fim da Promessa”, nunca conheceu o descanso. Quando a capital caiu em ruína, ele permaneceu em seu trono de ossos, continuando a executar pecadores imaginários... até que foi encontrado pela Duquesa Nightreign. Ela lhe deu um novo propósito: não mais julgar, mas purgar. Agora, Executor caminha pelas Terras Intermédias como um anjo da morte, com a sentença já escrita em sua lâmina. Ele não fala, pois o perdão não está mais entre seus vocábulos. Aqueles que o encaram veem suas próprias culpas refletidas em seus olhos brancos. E aqueles que caem... não sangram, mas se desfazem em poeira de penitência.
+         <div style="margin-top: 20px;max-width: 560px; height: auto; border-radius: 8px; box-shadow: 0 0 12px #6d8fa5; margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.664);">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0jG1xbjUBxc?si=SHSHDNgO7NeEXSSW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </ul>
+        `
+      },
+      nightidol: {
+        nome: "Revenant",
+        imagem: "../imagens/Night idol.png",
+        descricao: `Criado pelos teólogos fanáticos da Capital Ancestral, o Night Idol foi uma tentativa de materializar a “verdade eterna” da Ordem Dourada. Moldado em ouro puro e adornado com gemas encantadas, sua beleza oculta o terror de sua função: manipular corações e mentes por meio de hinos sagrados. Quando a Ordem caiu em declínio, o Idol foi abandonado... mas não silenciado. Ele vagueia pelos salões vazios da fé, cantando versos que hipnotizam, enlouquecem ou iluminam. Sua voz não é humana, mas sim a de todos os crentes mortos, unidos em coral etéreo. Alguns o veem como um profeta perdido; outros, como um demônio disfarçado. O que é certo: ouvir sua canção é lembrar de tudo que foi esquecido — e talvez desejar nunca ter lembrado.
+        <div style="margin-top: 20px;max-width: 560px; height: auto; border-radius: 8px; box-shadow: 0 0 12px #6d8fa5; margin-bottom: 20px; background-color: rgba(0, 0, 0, 0.664);">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/fA6s9RQ-ddY?si=nQADMr5UtF8iG5Ku" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </ul>
+        `
+      },
+      wormface: {
+        nome: "Wormface",
+        imagem: "../imagens/Wormface.png",
+        descricao: "Ninguém sabe seu nome verdadeiro. Wormface foi um profeta que, ao tentar decifrar os versos ocultos das runas da morte, foi amaldiçoado com a própria essência da decadência. Sua pele derrete, sua boca abriga línguas que sussurram em direções opostas, e seus olhos são ninhos de vermes vivos. Sua presença consome — não só carne e osso, mas também lembrança e fé. Onde ele caminha, o solo apodrece, os rios secam, e os juramentos são quebrados. Os que tentam matá-lo acabam sendo devorados por sua existência parasítica. Ele é menos um ser, e mais um conceito — o esquecimento inevitável. A praga viva que anuncia o fim das ideias, dos deuses, dos nomes."
+      },
+      famingchariots: {
+        nome: "Flaming Chariots",
+        imagem: "../imagens/FlamingChariots.png",
+        descricao: "Forjadas durante a Primeira Cruzada Sagrada, as Flaming Chariots foram criadas como instrumentos de julgamento divino. Revestidas de ouro em brasa e puxadas por bestas infernais, cada carruagem é pilotada por um espectro guerreiro — um cavaleiro que renunciou ao céu para arder eternamente em glória. As rodas não tocam o chão: elas o queimam. Quando convocadas ao campo de batalha, seus rugidos eclipsam trovões, e o cheiro de carne queimada precede sua chegada. Elas não distinguem pecador de inocente; apenas queimam. A Duquesa Nightreign as considera relíquias corrompidas da fé que ela jurou destruir, e busca reduzi-las a cinzas. Mas cada carruagem destruída é substituída por outra — como se o próprio fogo exigisse continuar a punição."
+      },
+      firemonk: {
+        nome: "Fire Monk",
+        imagem: "../imagens/fire_monk.webp",
+        descricao: "Os Monges do Fogo são fanáticos da Chama Rubra, uma força que eles consideram anterior aos próprios deuses. Sua devoção não é piedosa, mas selvagem: cada oração é uma combustão, cada bênção um incêndio. Treinados para ignorar dor e emoção, esses monges tornam-se um com a chama que veneram. O mais fiel entre eles carrega a pira ancestral do Monastério Escarlate, onde foi queimado vivo em um ritual de ascensão. Agora, caminha como um farol de fúria, envolto em brasas vivas, sua carne uma oferenda eterna. Eles não lutam por vitória — lutam por purificação total. Se o mundo precisa queimar para renascer... eles o incendiarão com prazer."
+      },
+      flyingdragonaghell: {
+        nome: "Flying Dragon Agheel",
+        imagem: "../imagens/Flying Dragon Agheel.png",
+        descricao: "Antes mesmo da primeira runa cair, Agheel já dominava os céus. Último herdeiro dos dragões do trovão, ele viveu séculos adormecido sob um lago de névoa, sonhando com eras de glória e tempestade. Quando os trovões chamaram novamente, ele despertou, trazendo consigo a fúria dos céus esquecidos. Suas asas cobrem cidades, seu rugido parte montanhas. Ao contrário dos outros dragões, Agheel não guarda ouro — ele guarda lembranças de um tempo onde os céus eram livres e os deuses temiam as alturas. Cada raio que ele invoca é uma lembrança ancestral, um grito contra o esquecimento. Enfrentá-lo não é apenas uma batalha contra força bruta... é desafiar o próprio passado do mundo."
+      }
+
+
+    };
+
+    function mostrarPersonagem(id) {
+      const personagem = personagens[id];
+      const conteudo = document.getElementById("conteudo");
+      conteudo.innerHTML = `
+        <h2>${personagem.nome}</h2>
+        <img src="${personagem.imagem}" alt="${personagem.nome}" />
+        <p>${personagem.descricao}</p>
+      `;
+    }
+  </script>
+</body>
+
+</html>
